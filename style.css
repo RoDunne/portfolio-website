@@ -6,6 +6,7 @@
 
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color:aliceblue;
 }
 
 html{
@@ -13,7 +14,7 @@ html{
 }
 
 p{
-    color: rgb(85, 85 , 85);
+    color:darkslategray;
 }
 
 
@@ -23,17 +24,16 @@ a, .btn{
 
 
 /* DESKTOP NAV */
-nav, .nav-links{
-    display: flex;
-}
 
 nav{
+    display: flex;
     justify-content: space-around;
     align-items: center;
     height: 17vh;
 }
 
 .nav-links{
+    display: flex;
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
@@ -51,6 +51,7 @@ a:hover{
     text-underline-offset: 0.5rem;
     text-decoration-color: gainsboro;
 }
+
 .logo{
     font-size: 3rem;
 }
@@ -117,13 +118,13 @@ a:hover{
 }
 
 .hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translate(10px, 5px);
+    transform: rotate(45deg) translateY(15px);
 }
 .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
 }
 .hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translate(10px, -5px);
+    transform: rotate(-45deg) translateY(-10px);
 }
 
 .hamburger-icon span:first-child{
@@ -147,7 +148,7 @@ section{
 
 /*PROFILE*/
 
-#profile{
+#profile-sec{
     display: flex;
     justify-content: center;
     gap: 5rem;
