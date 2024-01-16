@@ -15,7 +15,7 @@ h1{
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: whitesmoke;
-    background-image: url("/assets/background.webp");
+    background-image: url("./assets/background.webp");
 }
 
 a, .btn{
@@ -264,7 +264,7 @@ section{
     height: 44px;
     width: 200px;
     text-align: left;
-    background-image: url('/assets/checkmark.png');
+    background-image: url('./assets/checkmark.png');
     background-repeat: no-repeat;
     padding: 10px 0 0 56px;
     background-size: 24px contain;
@@ -283,7 +283,7 @@ section{
     font-size: 1.5em;
     height: 44px;
     text-align: left;
-    background-image: url('/assets/certification.png');
+    background-image: url('./assets/certification.png');
     background-repeat: no-repeat;
     padding: 10px 0 0 56px;
     background-size: 48px;
@@ -298,7 +298,7 @@ section{
     font-size: 1.5em;
     height: 44px;
     text-align: left;
-    background-image: url('/assets/graduation.png');
+    background-image: url('./assets/graduation.png');
     background-repeat: no-repeat;
     padding: 10px 0 0 68px;
     background-size: 56px;
