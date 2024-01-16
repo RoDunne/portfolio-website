@@ -4,26 +4,39 @@
     padding: 0;
 }
 
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color:aliceblue;
-}
-
 html{
     scroll-behavior: smooth;
 }
 
-p{
-    color:darkslategray;
+h1{
+    font-size: 2rem;
 }
 
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+    background-image: url("/assets/background.webp");
+}
 
 a, .btn{
     transition: all 300ms ease;
 }
 
+.icon{
+    height: 4rem;
+    border: 2px solid transparent;
+}
 
-/* DESKTOP NAV */
+.icon:hover{
+    border: 2px solid dimgray;
+    border-radius: 50% 50%;
+}
+
+.down-arrow{
+    margin: 1rem;
+}
+
+/* #region DESKTOP NAV */
 
 nav{
     display: flex;
@@ -36,7 +49,7 @@ nav{
     display: flex;
     gap: 2rem;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 a{
@@ -46,14 +59,16 @@ a{
 }
 
 a:hover{
-    color: darkgray;
+    color: darkgrey;
     text-decoration: underline;
+    text-decoration-thickness: 4px;
     text-underline-offset: 0.5rem;
     text-decoration-color: gainsboro;
 }
 
 .logo{
     font-size: 3rem;
+
 }
 
 .logo:hover{
@@ -61,7 +76,9 @@ a:hover{
 }
 
 
-/* HAMBURGER */
+/* #endregion */
+
+/* #region HAMBURGER NAV*/
 
 #hamburger-nav{
     display: none;
@@ -76,14 +93,14 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 24px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
 }
 
 .hamburger-icon span{
     width: 100%;
-    height: 2px;
+    height: 4px;
     background-color: black;
     transition: all 0.3 ease-in-out;
 }
@@ -114,17 +131,27 @@ a:hover{
 }
 
 .menu-links.open{
-    max-height: 300px; 
+    max-height: 300px;
+    border: 2px solid black; 
 }
 
 .hamburger-icon.open span:first-child {
-    transform: rotate(45deg) translateY(15px);
-}
+    transform: rotate(45deg);
+    translate: 0 23px;
+    transform-origin: center;
+    transition: transform 400ms ease;
+    
+ }
 .hamburger-icon.open span:nth-child(2) {
     opacity: 0;
+    transition: opacity 100ms ease-out;
 }
 .hamburger-icon.open span:last-child {
-    transform: rotate(-45deg) translateY(-10px);
+    transform: rotate(-45deg);
+    translate: 0 -23px;
+    transform-origin: center;
+    transition: transform 400ms ease;
+    
 }
 
 .hamburger-icon span:first-child{
@@ -136,49 +163,247 @@ a:hover{
 .hamburger-icon span:last-child{
     transform: none;
 }
+/* #endregion*/
 
-/*SECTIONS*/
+/* #region SECTIONS */
+
 section{
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
+    min-height: 100svh;
+    padding-top: 1rem;
+    margin: 2rem 10rem;
     box-sizing: border-box;
-    min-height: fit-content;
+    text-align: center;
 }
 
 /*PROFILE*/
 
-#profile-sec{
+#profile{
     display: flex;
     justify-content: center;
+    text-align: center;
+    align-items: center;
     gap: 5rem;
-    height: 80vh;
-
+    min-height: fit-content;
+    padding-top: 0;
+    margin-bottom: 16rem;
 }
+
 
 .section_pic-container{
     display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-}
-
-.section_text{
-    align-self: center;
-    text-align: center;
+    min-width: 300px;
+    min-height: 300px;
+    height: 25vw;
+    width: 25vw;
 }
 
 #socials-container{
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+/* ABOUT */
+
+#about div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3rem 0 15rem 0;
+    gap: 4rem;
+}
+
+#about p{
+    max-width: 600px;
+    min-width: 400px;
+    padding: 1.5rem;
+    text-align: justify;
+    box-shadow: 0.5rem 0.5rem darkolivegreen;
+    border: 2px solid darkolivegreen;
+    background-color: beige;
+}
+
+.about-image{
+    display: block; 
+    max-width: 40%;
+    min-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* EXPERIENCE */
+
+#experience-cards-div{
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.experience-card {
+    width: 36svw;
+    box-shadow: 0.5rem 0.5rem darkolivegreen;
+    border: 3px solid darkolivegreen;  
+    border-radius: 2rem;  
+    padding: 1rem;
+    background-color: whitesmoke;
+}
+
+.checkmark-list{
+    padding: 2rem 1rem 1rem 1rem;
+    list-style-type: none;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkmark-list li{
+    font-size: 1.5em;
+    height: 44px;
+    width: 200px;
+    text-align: left;
+    background-image: url('/assets/checkmark.png');
+    background-repeat: no-repeat;
+    padding: 10px 0 0 56px;
+    background-size: 24px contain;
+}
+
+.checkmark-list p{
+    text-indent: 0.875rem;
+    font-size: 1rem;
+}
+.certificate-list{
+    padding: 2rem 1rem 1rem 1rem;
+    list-style-type: none;
+}
+
+.certificate-list li{
+    font-size: 1.5em;
+    height: 44px;
+    text-align: left;
+    background-image: url('/assets/certification.png');
+    background-repeat: no-repeat;
+    padding: 10px 0 0 56px;
+    background-size: 48px;
+}
+
+.education-list{
+    padding: 2rem 1rem 1rem 1rem;
+    list-style-type: none;
+}
+
+.education-list li{
+    font-size: 1.5em;
+    height: 44px;
+    text-align: left;
+    background-image: url('/assets/graduation.png');
+    background-repeat: no-repeat;
+    padding: 10px 0 0 68px;
+    background-size: 56px;
+}
+
+.education-list div{
+    font-size: 1rem;
+    text-indent: 1.25rem each-line;
+}
+
+/* PROJECTS */
+.project-cards-wrapper{
+    display: grid;
     gap: 1rem;
+    grid-template-columns: 60% 1fr;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 1rem 0 1rem;
 }
 
-/*ICONS*/
-
-.icon{
-    cursor: pointer;
-    height: 2rem;
+.project-card{
+    border: 3px solid darkolivegreen;
+    border-radius: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
+    width: fit-content;
+    background-color: whitesmoke; 
+    box-shadow: 0.5rem 0.5rem darkolivegreen;
 }
 
+.project-card img{
+    max-height: 450px;
+    max-width: 800px
+}
+
+.project-card h3{
+    padding: 1rem;
+}
+
+.project-card p{
+    max-width: 800px;
+    min-width: 300px;
+    text-align: justify;
+    margin: 1rem 1rem 2rem 1rem;
+}
+
+.project-card a{
+    background-color: beige;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+    color: black;
+    text-decoration: none;
+    transition: all ease-out;
+}
+
+.project-card a:hover{
+    text-decoration: none;
+    border: 2px solid darkolivegreen;
+}
+
+/* CONTACT */
+
+#contact{
+    min-height: fit-content;
+}
+ .contact-card{
+    display: grid;
+    margin: 3rem auto 1rem auto;
+    padding: 2rem 0;
+    max-width: 50svw;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    background-color: beige;
+    border: 2px solid darkolivegreen;
+    box-shadow: 0.5rem 0.5rem darkolivegreen;
+ }
+
+ .contact-card a{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+ }
+
+
+ .contact-card a:hover{
+    color: black;
+    transition: none;
+    text-decoration-color: dimgray;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25rem;
+ }
+
+
+ .contact-image{
+    width: 60%;
+    min-width: 300px;
+    margin: 1rem;
+ }
+
+
+/* #endregion */
+
+/* FOOTER */
+footer{
+    text-align: center;
+}

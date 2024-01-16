@@ -3,7 +3,12 @@
         display: none;
     }
 
+    .down-arrow{
+        display: none;
+    }
+
     #hamburger-nav{
         display: flex;
     }
+
 }

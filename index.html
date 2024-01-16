@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <header>
+    <header id="top">
         <nav id="desktop-nav">
             <h1 class="logo">Robert Dunnett</h1>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <nav id="hamburger-nav">
-            <div class="logo">Robert Dunnett</div>
+            <h1 class="logo">Robert Dunnett</h1>             
             <div class="hamburger-menu">
                 <div class="hamburger-icon" onclick="toggleMenu()">
                     <span></span>
@@ -29,47 +29,162 @@
                 <div class="menu-links">
                     <li><a href="#about" onclick="toggleMenu()">About</a></li>
                     <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                 </div>    
             </div>
         </nav>
     </header>
     <main>
-        <section id="profile-sec">
+        <section id="profile">
             <div class="section_pic-container">
-                <img src="./assets/profile-pic.webp" alt="Profile picture of the author">
+                <img src="/assets/profile-pic.webp" alt="Photo of a man">
             </div>
-            <div class="section_text">
-                <p>Hello, I am</p>
-                <h1>Robert Dunnett</h1>
-                <p>Software Developer</p>
-                <div class="btn-container">
-                    <button onclick="location.href='./#contact'">Contact Info</button>
-                </div>
+            <div>
+                <h2>Software Developer </h2>
+                <h2>&</h2>
+                <h2>IT Professional</h2> 
                 <div id="socials-container">
-                    <img src="./assets/linkedin.png" alt="My linkedin" class="icon" 
-                    onclick="location.href='https://www.linkedin.com/in/robert-dunnett-15b261275/'">
-                    <img src="./assets/github.png" alt="My github" class="icon" 
-                    onclick="location.href='https://github.com/RoDunne'">
+                    <a href="https://www.linkedin.com/in/robert-dunnett-15b261275/" target="_blank" rel="noopener noreferrer">
+                        <img class="icon"  src="/assets/linkedin.png" alt="Link to my linkedin">
+                    </a>
+                    <a href="https://github.com/RoDunne" target="_blank" rel="noopener noreferrer">
+                        <img class="icon" src="/assets/github.png" alt="Link to my github">
+                    </a>
                 </div>
-    
             </div>
-    
+        </section>    
+        <section id="about">
+            <h1>About Me</h1>
+            <div>
+                <p>
+                    Hi there, I'm Robert, welcome to my section of the internet. So, picture 
+                    this: after high school, I stumbled into custodial work. College? Nah, 
+                    couldn't afford it. I had to get a job first. Life happened, and suddenly, 
+                    custodial wasn't just a pit stop; it became the main gig.<br>
+                    <br>
+                    But hold up, plot twist! When the chance came knocking, I moved back in with
+                    the folks, rocked my college degree, and snagged some certificates along 
+                    the way. Now, you might glance at my resume and see "custodian extraordinaire," 
+                    but let me tell you, that's just one chapter. I'm all about learning; 
+                    I don't hit the brakes. Sure, my work experience might look boring, 
+                    but my attitude screams "relentless learner." Give me a challenge, and 
+                    I'll meet it head-on until I'm the best in class.<br>
+                    <br>
+                    Beyond the career, I'm all about nature - fishing, camping, off-roading, 
+                    you name it. Video games and board games? Sign me up. I'm always down for 
+                    sightseeing and the joy of devouring some good food. And speaking of food, 
+                    I love to cook up a big feast.<br>
+                    <br>
+                    Now, let's get real. I'm not just looking for a job; I want a cause to 
+                    champion. Consider me not just a professional but a man on a mission. 
+                    Thanks for having a look into my world, and I hope you see the spark that 
+                    makes me more than just a resume. Cheers!
+                </p>
+                <img class="about-image" src="/assets/motorcycle-woods.webp" alt="Motorcycle alone in the woods">
+            </div>
+            <a href="#experience">
+                <img class="icon down-arrow"  src="/assets/down-arrow.png" alt="Scroll down">
+            </a>
         </section>
-        <section id="about-sec">
-    
+        <section id="experience">
+            <h1>Experience</h1>
+            <div id="experience-cards-div">
+                <div class="experience-card">
+                    <h2>Development Skills</h2>
+                    <ul class="checkmark-list">
+                        <li>C# <p>Intermediate</p></li>
+                        <li>Python <p>Basic</p></li>
+                        <li>.NET <p>Basic</p></li>
+                        <li>HTML <p>Basic</p></li>
+                        <li>CSS <p>Basic</p></li>
+                        <li>SQL <p>Basic</p></li>
+                        <li>Mobile <p>Basic</p></li>
+                        <li>UI Design <p>Basic</p></li>
+                        <li>Visual Studio <p>Basic</p></li>
+                        <li>git <p>Basic</p></li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h2>IT Skills</h2>
+                    <ul class="checkmark-list">
+                        <li>Microsoft Excel <p>Intermediate</p></li>
+                        <li>Microsoft Word <p>Intermediate</p></li>
+                        <li>Windows Server <p>Basic</p></li>
+                        <li>Active Directory <p>Basic</p></li>
+                        <li>Group Policy <p>Basic</p></li>
+                        <li>Virtualization <p>Basic</p></li>
+                        <li>Troubleshooting <p>Intermediate</p></li>
+                        <li>Network Config <p>Basic</p></li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h2>Certifications</h2>
+                    <ul class="certificate-list">
+                        <li>CompTIA A+ 2022</li>
+                        <li>CompTIA Project+ 2022</li>
+                        <li>ITIL Foundation 2022</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <h2>Education</h2>
+                    <ul class="education-list">
+                        <li>B.S. in Software Development
+                            <div>
+                                Western Governors University | Salt Lake City, UT<br>
+                                Graduated in 2023
+                            </div>          
+                        </li>
+                    </ul>       
+                </div>
+            </div>
+            <a href="#projects">
+                <img class="icon down-arrow"  src="/assets/down-arrow.png" alt="Scroll down">
+            </a>       
         </section>
-        <section id="experience-sec">
-    
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project-cards-wrapper">
+                <div class="project-card">
+                    <img src="/assets/project1.PNG" alt="Desktop Application Dashboard">
+                    <h3>Global Appointment System</h3>
+                    <p>A Windows desktop application developed in Microsoft Visual Studio with the .NET Framework. It serves as a customer relationship management (CRM) system for a small company. It uses a MySQL server to host the database to store customer information. The application tracks appointments between clients and salespersons and displays them with filtering options. An attractive dashboard shows an overall view of the appointments in the system.</p>
+                    <a href="https://github.com/RoDunne/DunnettMSP2" target="_blank" rel="noopener noreferrer">Project GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="/assets/project2.png" alt="Mobile Application UI">
+                    <h3>Android Student Planner</h3>
+                    <p>A mobile student planner for Android phones using Xamarin and SQLite. The application allows students to create, change, and delete terms, courses, exams, etc, and uses notifications for upcoming due dates.</p>
+                    <a href="https://github.com/RoDunne/GlobAL-Appointment-System" target="_blank" rel="noopener noreferrer">Project GitHub</a>
+                </div>
+            </div>
+            <a href="#contact">
+                <img class="icon down-arrow"  src="/assets/down-arrow.png" alt="Scroll down">
+            </a>
         </section>
-        <section id="projects-sec">
-    
-        </section>
-        <section id="contact-sec">
-    
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="contact-card">
+                <img class="contact-image" src="/assets/ducks-lake.webp" alt="Ducks in a lake">
+                <h2>Contact me about employment opportunities through my LinkedIn.</h2>
+                <a href="https://www.linkedin.com/in/robert-dunnett-15b261275/" target="_blank" rel="noopener noreferrer">
+                    <img class="icon"  src="/assets/linkedin.png" alt="Link to my linkedin">My LinkedIn Profile
+                </a>             
+            </div>    
         </section>
     </main> 
+    <footer>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#top">Top</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <p>Copyright &#169 2023 Robert Dunnett. All rights reserved. Icons by <a href="https://icons8.com" target="_blank" rel="noopener noreferrer">Icon8</a></p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
