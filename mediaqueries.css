@@ -4,11 +4,11 @@
     }
 
     .down-arrow{
-        display: none;
+        display: none; 
     }
 
     #hamburger-nav{
-        display: flex;
+        display:  flex;
     }
 
 }
