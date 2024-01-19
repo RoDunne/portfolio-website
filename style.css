@@ -12,6 +12,7 @@ h1{
     font-size: 2rem;
 }
 
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: whitesmoke;
@@ -22,8 +23,13 @@ a, .btn{
     transition: all 300ms ease;
 }
 
+.logo{
+    font-size: clamp(2.25rem, 3svw + 0.25rem, 3rem);
+}
+
 .icon{
     height: 4rem;
+    width: 4rem;
     border: 2px solid transparent;
 }
 
@@ -33,7 +39,8 @@ a, .btn{
 }
 
 .down-arrow{
-    margin: 1rem;
+    margin-top: 1rem;
+
 }
 
 /* #region DESKTOP NAV */
@@ -42,7 +49,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 17vh;
+    height: 17svh;
 }
 
 .nav-links{
@@ -64,15 +71,6 @@ a:hover{
     text-decoration-thickness: 4px;
     text-underline-offset: 0.5rem;
     text-decoration-color: gainsboro;
-}
-
-.logo{
-    font-size: 3rem;
-
-}
-
-.logo:hover{
-    cursor: default;
 }
 
 
@@ -169,8 +167,8 @@ a:hover{
 
 section{
     min-height: 100svh;
-    padding-top: 1rem;
-    margin: 2rem 10rem;
+    padding-top: 2rem;
+    margin: 0 auto 3rem auto;
     box-sizing: border-box;
     text-align: center;
 }
@@ -179,22 +177,22 @@ section{
 
 #profile{
     display: flex;
+    flex-wrap:wrap;
+    align-content:center;
     justify-content: center;
     text-align: center;
     align-items: center;
-    gap: 5rem;
-    min-height: fit-content;
-    padding-top: 0;
-    margin-bottom: 16rem;
+    gap: 2rem 5rem;
+    min-height: 83svh;
+    padding-top: 0rem;
 }
 
 
-.section_pic-container{
-    display: flex;
-    min-width: 300px;
-    min-height: 300px;
-    height: 25vw;
-    width: 25vw;
+.profile-pic{
+    min-width: 350px;
+    min-height: 350px;
+    height: 28vw;
+    width: 28vw;
 }
 
 #socials-container{
@@ -205,18 +203,17 @@ section{
 }
 
 /* ABOUT */
-
 #about div{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 3rem 0 15rem 0;
     gap: 4rem;
+    margin-top: 2rem;
 }
 
 #about p{
-    max-width: 600px;
-    min-width: 400px;
+    max-width: min(600px, 80svw);
+    min-width: 340px;
     padding: 1.5rem;
     text-align: justify;
     box-shadow: 0.5rem 0.5rem darkolivegreen;
@@ -227,7 +224,7 @@ section{
 .about-image{
     display: block; 
     max-width: 40%;
-    min-width: 300px;
+    min-width: 375px;
     height: auto;
     object-fit: contain;
 }
@@ -235,34 +232,34 @@ section{
 /* EXPERIENCE */
 
 #experience-cards-div{
-    margin: 2rem 0 0 0;
+    margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .experience-card {
-    width: 36svw;
-    box-shadow: 0.5rem 0.5rem darkolivegreen;
-    border: 3px solid darkolivegreen;  
+    min-width: 350px;
+    width: 40rem;
+    border: 4px solid darkolivegreen;  
     border-radius: 2rem;  
     padding: 1rem;
     background-color: whitesmoke;
+    margin: 0 0.5rem;
 }
 
 .checkmark-list{
-    padding: 2rem 1rem 1rem 1rem;
+    margin-top: 1rem;
+    padding: 0 2rem;
     list-style-type: none;
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
 .checkmark-list li{
-    font-size: 1.5em;
-    height: 44px;
-    width: 200px;
+    font-size: 1.5rem;
     text-align: left;
     background-image: url('./assets/checkmark.png');
     background-repeat: no-repeat;
@@ -271,16 +268,18 @@ section{
 }
 
 .checkmark-list p{
-    text-indent: 0.875rem;
+    text-indent: 0.75rem;
     font-size: 1rem;
 }
+
 .certificate-list{
-    padding: 2rem 1rem 1rem 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
     list-style-type: none;
 }
 
 .certificate-list li{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     height: 44px;
     text-align: left;
     background-image: url('./assets/certification.png');
@@ -290,59 +289,62 @@ section{
 }
 
 .education-list{
-    padding: 2rem 1rem 1rem 1rem;
+    margin-top: 2rem;
+    padding-left: 1.625rem;
     list-style-type: none;
 }
 
 .education-list li{
-    font-size: 1.5em;
-    height: 44px;
+    font-size: min(1.5em, 4.5vw);
     text-align: left;
     background-image: url('./assets/graduation.png');
     background-repeat: no-repeat;
-    padding: 10px 0 0 68px;
-    background-size: 56px;
+    padding: 10px 0 0 min(68px, 11vw);
+    background-size: min(56px, 10vw);
 }
 
-.education-list div{
+.education-list p{
     font-size: 1rem;
-    text-indent: 1.25rem each-line;
+    text-indent: 0.5rem each-line;
 }
 
 /* PROJECTS */
-.project-cards-wrapper{
+#projects{
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 60% 1fr;
     justify-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 2rem 1rem 0 1rem;
 }
 
 .project-card{
-    border: 3px solid darkolivegreen;
+    border: 4px solid darkolivegreen;
     border-radius: 2rem;
-    padding: 2rem 1rem 2rem 1rem;
-    width: fit-content;
+    margin:1.5rem 0.5rem;
+    padding: min(2rem, 3vw);
+    max-width: 75rem;
     background-color: whitesmoke; 
-    box-shadow: 0.5rem 0.5rem darkolivegreen;
 }
 
-.project-card img{
-    max-height: 450px;
-    max-width: 800px
+#first-project-image{
+    width: 100%;
+    max-width: 60rem;
+    height: auto;
 }
+
+#second-project-image{
+    width: 40%;
+    max-width: 16rem;
+    height: auto;
+    float: inline-end;
+    margin-left: 2rem;
+}
+
 
 .project-card h3{
     padding: 1rem;
 }
 
 .project-card p{
-    max-width: 800px;
-    min-width: 300px;
-    text-align: justify;
-    margin: 1rem 1rem 2rem 1rem;
+    text-align:justify;
+    margin-bottom: 1.5rem;
 }
 
 .project-card a{
@@ -360,16 +362,24 @@ section{
     border: 2px solid darkolivegreen;
 }
 
+#second-project-card{
+    max-width: 30rem;
+}
+
 /* CONTACT */
 
 #contact{
     min-height: fit-content;
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
 }
+
  .contact-card{
     display: grid;
-    margin: 3rem auto 1rem auto;
+    margin: 1.5rem 0.5rem 0 0.5rem;
     padding: 2rem 0;
-    max-width: 50svw;
+    max-width: 60rem;
     gap: 2rem;
     align-items: center;
     justify-items: center;
@@ -383,7 +393,6 @@ section{
     align-items: center;
     gap: 0.25rem;
  }
-
 
  .contact-card a:hover{
     color: black;
@@ -406,4 +415,15 @@ section{
 /* FOOTER */
 footer{
     text-align: center;
+}
+
+footer .nav-links{
+    font-size: clamp(0.5rem, 3.5vw + 0.25rem, 3rem);
+    gap: clamp(1.5rem, 2vw + 0.25rem, 2.5rem);
+}
+
+footer nav{
+    height: fit-content;
+    margin: 1.5rem;
+    padding-bottom: 4rem;
 }

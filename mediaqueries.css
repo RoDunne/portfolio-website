@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
     #desktop-nav{
         display: none;
     }
@@ -12,3 +12,21 @@
     }
 
 }
+
+@media screen and (max-width: 767px){
+    .education-list{
+        padding-left: 0;
+    }
+
+    footer nav{
+        padding-bottom: 10rem;
+    }
+}
+
+@media screen and (max-width: 479px){
+    .certificate-list{
+        padding-left: 0rem;
+    }
+
+}
+
